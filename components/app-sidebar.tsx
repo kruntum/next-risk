@@ -2,20 +2,20 @@
 
 import * as React from "react"
 import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
+  // AudioWaveform,
+  // BookOpen,
+  // Bot,
+  // Command,
+  // Frame,
+   GalleryVerticalEnd,
+  // Map,
+  // PieChart,
   Settings2,
   SquareTerminal,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
+// import { NavProjects } from "@/components/nav-projects"
 import { NavUser } from "@/components/nav-user"
 import { TeamSwitcher } from "@/components/team-switcher"
 import {
@@ -35,11 +35,11 @@ const data = {
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "แผนกศุลกากร",
       logo: GalleryVerticalEnd,
-      plan: "Enterprise",
+      plan: "ระบบบริหารความผิดพลาด",
     },
-    {
+/*     {
       name: "Acme Corp.",
       logo: AudioWaveform,
       plan: "Startup",
@@ -48,17 +48,17 @@ const data = {
       name: "Evil Corp.",
       logo: Command,
       plan: "Free",
-    },
+    }, */
   ],
   navMain: [
     {
-      title: "Documentation",
-      url: "#",
+      title: "ระบบบริหารความผิดพลาด",
+      url: "/dashboard",
       icon: SquareTerminal,
-      isActive: true,
+      //isActive: true,
       items: [
         {
-          title: "Dashboard",
+          title: "แดชบอร์ด",
           url: "/dashboard",
         },
         {
@@ -71,7 +71,7 @@ const data = {
         },
       ],
     },
-    {
+/*     {
       title: "Models",
       url: "#",
       icon: Bot,
@@ -112,32 +112,22 @@ const data = {
           url: "#",
         },
       ],
-    },
+    }, */
     {
-      title: "Settings",
-      url: "#",
+      title: "ตั้งค่า",
+      url: "/dashboard/profile",
       icon: Settings2,
       items: [
+
         {
-          title: "General",
-          url: "#",
+          title: "โปรไฟล์",
+          url: "/dashboard/profile",
         },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
+
       ],
     },
   ],
-  projects: [
+/*   projects: [
     {
       name: "Design Engineering",
       url: "#",
@@ -153,8 +143,8 @@ const data = {
       url: "#",
       icon: Map,
     },
-  ],
-}
+  ],*/
+} 
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -164,7 +154,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+        {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
